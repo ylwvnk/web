@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "workspaces": [
+    "./apps/*"
+  ],
+  "scripts": {
+    "turbo": "turbo --help",
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint"
+  },
+  "dependencies": {
+    "turbo": "^1.11.2"
+  }
+}
