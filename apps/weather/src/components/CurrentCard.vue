@@ -1,22 +1,18 @@
 <script setup lang="ts">
 import Card from '@/components/Card.vue'
-import { getPosition } from '@/utils/position'
+import { getPositionQuery } from '@/utils/position'
 import { getCurrentWeather } from '@/services/weather'
 import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import IconConditionSwitch from '@/components/IconConditionSwitch.vue'
 
-const props = withDefaults(
-  defineProps<{
-    query?: string
-  }>(),
-  {
-    query: await getPosition().then(({ coords }) => `${coords.latitude},${coords.longitude}`)
-  }
-)
+const props = defineProps<{
+  query?: string
+}>()
 
 const route = useRoute()
-const currentWeather = await getCurrentWeather(props.query)
+const query = props?.query ?? (await getPositionQuery())
+const currentWeather = await getCurrentWeather(query)
 const weather = ref(currentWeather)
 
 watch(
