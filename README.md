@@ -3,4 +3,3 @@
 ## Apps
 
 - [weather](/apps/weather/README.md)
-- [tasks](/apps/weather/README.md)
