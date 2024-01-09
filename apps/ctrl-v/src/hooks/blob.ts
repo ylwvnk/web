@@ -1,4 +1,5 @@
 import { useEffect, useState, type ChangeEvent } from 'react'
+import { toast } from 'sonner'
 
 export type BlobState = {
   blob?: Blob | File
@@ -14,7 +15,7 @@ export const useBlobUrl = () => {
       const file = event.clipboardData.files.item(0) as File
       const url = URL.createObjectURL(file)
 
-      console.log(file)
+      toast.success(`Copied ${file.name} from clipboard!`)
 
       setBlob(file)
       setBlobUrl(url)
@@ -23,7 +24,7 @@ export const useBlobUrl = () => {
       const textBlob = new Blob([text], { type: 'text/plain' })
       const url = URL.createObjectURL(textBlob)
 
-      console.log(textBlob)
+      toast.success('Copied text from clipboard!')
 
       setBlob(textBlob)
       setBlobUrl(url)
@@ -31,25 +32,29 @@ export const useBlobUrl = () => {
   }
 
   const onPasteFromClipboard = async () => {
-    const [clipboardItem] = await navigator.clipboard.read()
+    try {
+      const [clipboardItem] = await navigator.clipboard.read()
 
-    const imageType = clipboardItem.types.find((type) => type.includes('image'))
-    const textType = clipboardItem.types.find((type) => type.includes('text'))
+      const imageType = clipboardItem.types.find((type) => type.includes('image'))
+      const textType = clipboardItem.types.find((type) => type.includes('text'))
 
-    const clipboardItemBlob = await clipboardItem.getType((imageType ?? textType) as string)
-    const url = URL.createObjectURL(clipboardItemBlob)
+      const clipboardItemBlob = await clipboardItem.getType((imageType ?? textType) as string)
+      const url = URL.createObjectURL(clipboardItemBlob)
 
-    console.log(clipboardItemBlob)
+      toast.success('Copied from clipboard!')
 
-    setBlob(clipboardItemBlob)
-    setBlobUrl(url)
+      setBlob(clipboardItemBlob)
+      setBlobUrl(url)
+    } catch (error) {
+      toast.error(`${error}`)
+    }
   }
 
-  const onPasteFromFileSystem = async (event: ChangeEvent<HTMLInputElement>) => {
+  const onPasteFromFileSystem = (event: ChangeEvent<HTMLInputElement>) => {
     const [file] = event.currentTarget.files as FileList
     const url = URL.createObjectURL(file)
 
-    console.log(file)
+    toast.success(`Copied ${file.name} from file system!`)
 
     setBlob(file)
     setBlobUrl(url)

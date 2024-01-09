@@ -1,18 +1,21 @@
+import { toast } from 'sonner'
 import { type BlobState } from '../hooks/blob'
 
 export const FormBlob = ({ url }: BlobState) => {
   const handleCopyUrlToClipboard = () => {
-    console.log(url)
-
     if (!url) return
 
-    navigator.clipboard.writeText(url)
+    toast.promise(navigator.clipboard.writeText(url), {
+      loading: 'Copying to clipboard...',
+      success: 'Copied to clipboard!',
+      error: 'Could not copy to clipboard.'
+    })
   }
 
   return (
     <form
       name='blob_url'
-      className='group relative w-72 border-b-2 md:border-b-4 border-gray-400 dark:border-gray-600 md:w-80'
+      className='group relative w-72 border-b-2 border-gray-400 dark:border-gray-600 md:w-80 md:border-b-4'
     >
       <svg
         xmlns='http://www.w3.org/2000/svg'
@@ -37,7 +40,7 @@ export const FormBlob = ({ url }: BlobState) => {
         readOnly
       />
 
-      <span className='absolute -bottom-0.5 left-0 h-1 md:-bottom-1 w-0 bg-black transition-[width] group-hover:w-full dark:bg-white' />
+      <span className='absolute -bottom-0.5 left-0 h-1 w-0 bg-black transition-[width] group-hover:w-full dark:bg-white md:-bottom-1' />
     </form>
   )
 }

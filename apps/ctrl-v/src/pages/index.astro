@@ -4,17 +4,16 @@ import Layout from '../layouts/Layout.astro'
 import IconClipboard from '../components/icons/IconClipboard.astro'
 ---
 
-<Layout
-  title='ctrl + v'
-  className='grid place-items-center relative dark:bg-black min-h-dvh'
->
-  <header
-    class='flex items-center justify-center gap-1 absolute left-0 right-0 lg:top-36 top-14 md:top-24'
-  >
-    <IconClipboard />
+<Layout title='ctrl + v'>
+  <div class='grid place-items-center relative dark:bg-black min-h-dvh'>
+    <header
+      class='flex items-center justify-center gap-1 absolute left-0 right-0 lg:top-36 top-14 md:top-24'
+    >
+      <IconClipboard />
 
-    <h1 class='dark:text-white text-2xl font-bold [word-spacing:-.2ch] md:text-3xl'>ctrl + v</h1>
-  </header>
+      <h1 class='dark:text-white text-2xl font-bold [word-spacing:-.2ch] md:text-3xl'>ctrl + v</h1>
+    </header>
 
-  <MainContent client:idle />
+    <MainContent client:idle />
+  </div>
 </Layout>
