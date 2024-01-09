@@ -4,11 +4,15 @@
     "turbo": "turbo --help",
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "lint": "turbo run lint"
+    "lint": "turbo run lint",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.9",
-    "turbo": "^1.11.2"
+    "turbo": "^1.11.2",
+    "vitepress": "1.0.0-rc.36"
   }
 }
