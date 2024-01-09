@@ -2,26 +2,34 @@
 
 A web app to display weather information. It uses [WeatherApi](https://www.weatherapi.com/) API to fetch weather data.
 
-## Project Setup on root
+## Project Setup
+
+Make sure to run `pnpm install` in the root directory.
 
 ```sh
-npm install
+# /web
+pnpm install
 ```
 
-### Dev Mode
+Now you can create your `.env`:
 
 ```sh
-npm run dev -- --filter=weather
+# /web/apps/weather
+touch .env
 ```
 
-### Build
+Then add your API key with the same name of the variable in [`.env.example`](./.env.example), so it will be see like this:
 
 ```sh
-npm run build -- --filter=weather
+# /web/apps/weather/.env
+VITE_WEATHER_KEY="<YOUR_API_KEY>"
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+## Dev Mode
+
+This monorepo uses [turbo](https://turbo.build/repo) to run only this app in dev mode. Just run the following command:
 
 ```sh
-npm run lint --workspace=weather
+# /web
+pnpm dev --filter=weather
 ```
