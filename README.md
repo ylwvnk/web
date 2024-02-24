@@ -6,3 +6,4 @@
 
 - [weather](/apps/weather/README.md)
 - [ctrl-v](/apps/ctrl-v/README.md)
+- [chibi-url](/apps/chibi-url/README.md)
