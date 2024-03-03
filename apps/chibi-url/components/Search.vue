@@ -1,12 +1,14 @@
+<script setup lang="ts">
+const url = defineModel<string>()
+</script>
+
 <template>
-  <form class="relative mt-16">
+  <form @submit.prevent>
     <input
       type="url"
-      class="peer w-[450px] bg-[#121212] px-2.5 py-2 text-sm outline-none"
-      placeholder="Search shorter urls"
-    />
-    <span
-      class="absolute -bottom-0.5 left-0 h-0.5 w-full bg-gray-500 transition-colors peer-focus:bg-white"
+      class="w-full bg-[#1d1d1d] px-3.5 py-2.5 outline-none"
+      placeholder="Search your shortened URL here..."
+      v-model="url"
     />
   </form>
 </template>
