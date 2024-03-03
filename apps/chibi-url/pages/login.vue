@@ -2,8 +2,6 @@
 const { auth } = useSupabaseClient()
 const url = useRequestURL()
 
-console.log(url)
-
 const signInWithGithub = async () => {
   const { error } = await auth.signInWithOAuth({
     provider: 'github',
