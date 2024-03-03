@@ -20,15 +20,6 @@ defineProps<{
       <ul class="absolute right-0 top-8 z-10 w-64 space-y-1 rounded bg-[#1d1d1d] p-2 text-white">
         <li>
           <NuxtLink
-            to="/create"
-            class="flex items-center gap-1 rounded p-2 transition-colors hover:bg-[#121212]"
-          >
-            <IconPlus class="size-5" />
-            Create new link
-          </NuxtLink>
-        </li>
-        <li>
-          <NuxtLink
             to="/dash"
             class="flex items-center gap-1 rounded p-2 transition-colors hover:bg-[#121212]"
           >
