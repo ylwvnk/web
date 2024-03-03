@@ -1,5 +1,5 @@
 <template>
-  <div class="w-96 animate-pulse truncate rounded bg-[#1d1d1d] p-4">
+  <div class="w-80 animate-pulse truncate rounded bg-[#1d1d1d] p-4 xl:w-96">
     <p class="h-6 w-full rounded bg-white"></p>
 
     <div class="my-2 flex items-center gap-2">

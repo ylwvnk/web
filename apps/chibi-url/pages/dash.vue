@@ -11,7 +11,7 @@ const { filtered, userUrl, pending, refresh } = await useFilter('/api/user/url')
       <ModalCreate v-model="showCreateModal" @refresh="refresh" />
     </div>
 
-    <ul class="mt-5 grid grid-cols-3 place-items-center gap-4">
+    <ul class="mt-5 grid grid-flow-row-dense place-items-center gap-4 lg:grid-cols-3">
       <template v-if="pending">
         <li v-for="n in 9" :key="n">
           <FallbackCard>

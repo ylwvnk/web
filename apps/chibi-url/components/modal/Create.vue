@@ -34,7 +34,7 @@ const addTask = async () => {
         v-if="model"
         class="absolute left-0 top-0 z-10 grid h-full w-full place-items-center text-white backdrop-blur-sm transition-[backdrop-filter]"
       >
-        <form class="relative rounded bg-[#1d1d1d] p-3.5" @submit.prevent="addTask">
+        <form class="relative rounded bg-[#1d1d1d] p-3 lg:p-3.5" @submit.prevent="addTask">
           <div class="flex flex-col items-center gap-5">
             <h1 class="text-center text-lg">Create a new short URL</h1>
 
@@ -47,17 +47,19 @@ const addTask = async () => {
             </button>
           </div>
 
-          <label for="url" class="mb-2 mt-5 block"> Enter the URL here: </label>
+          <label for="url" class="mb-2 mt-5 block"> Enter the URL here:</label>
           <input
             type="url"
             id="url"
-            class="w-96 rounded-sm bg-[#121212] px-3.5 py-2.5 outline-none"
+            class="w-72 rounded-sm bg-[#121212] px-3 py-2 outline-none lg:w-96 lg:px-3.5 lg:py-2.5"
             placeholder="https://"
             v-model="url"
             required
           />
 
-          <button class="mx-auto mt-2 block rounded bg-[#121212] px-6 py-1.5">Add URL</button>
+          <button class="mx-auto mt-2 block rounded bg-[#121212] px-5 py-1.5 lg:px-6">
+            Add URL
+          </button>
         </form>
       </div>
     </Transition>

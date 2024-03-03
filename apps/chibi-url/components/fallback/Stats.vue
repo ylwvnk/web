@@ -4,7 +4,7 @@
       <div class="size-5 rounded bg-white" />
       <div class="h-5 w-2 rounded bg-white" />
       <div class="h-5 w-1 rounded bg-white" />
-      <div class="h-5 w-56 rounded bg-white" />
+      <div class="h-5 w-24 rounded bg-white lg:w-40" />
     </div>
 
     <slot />
