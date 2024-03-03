@@ -14,6 +14,10 @@ export const en: LocaleConfig = {
           {
             text: 'Ctrl-v',
             link: '/app/ctrl-v'
+          },
+          {
+            text: 'Chibi-url',
+            link: '/app/chibi-url'
           }
         ]
       }
@@ -23,7 +27,8 @@ export const en: LocaleConfig = {
         text: 'Apps',
         items: [
           { text: 'Weather', link: '/app/weather' },
-          { text: 'Ctrl-v', link: '/app/ctrl-v' }
+          { text: 'Ctrl-v', link: '/app/ctrl-v' },
+          { text: 'Chibi-url', link: '/app/chibi-url'}
         ]
       }
     ]
