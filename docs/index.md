@@ -13,13 +13,13 @@ hero:
       link: /app/weather
 
 features:
-  - title: AWAWAWA
-    details: awawawa awawawa. awawawa awawa, wawa wa awawawawa awa awawa wawa awawawa! awawawa? awawawa wawa awa.
-    icon: 🌠
-  - title: AWAWAWA?
-    details: awa, awawawa awawa, wawa wa awawawawa awa awawa. awawawa? awawawa, awawa awawa wawawawa! wawawa awawawawawa awawawa!
-    icon: 🎀
-  - title: REST IN SKIBIDI
-    details: sticking out your gyatt, for nerizzler, you're so bau bau, you're so biboo tax. I just wanna be your shiori
-    icon: 🗿
+  - title: CTRL+V
+    details: A simple web app that allows you to past "any" file and it will be converted to a blob url
+    icon: 📋
+  - title: Weather
+    details: Another simple web where you can check the weather of your city or any city
+    icon: ☀️
+  - title: Chibi-URL
+    details: This web app allows you to shorten any url
+    icon: 🔗
 ---

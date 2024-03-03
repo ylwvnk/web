@@ -1,34 +1,15 @@
 # [Weather](https://web-weathers-app.vercel.app/)
 
-Well this was my first vue app, I made it to learn vue.
+Weather, allows you to check the weather of your city or any city
 
-## Features
+## Technologies
 
-If you want to replicate this app, you can learn the following things:
+- [Vue](https://vuejs.org)
+- [TypeScript](https://www.typescriptlang.org)
+- [Tailwind CSS](https://tailwindcss.com)
 
-- [Suspense](https://vuejs.org/guide/built-ins/suspense.html)
-- [Error handling](https://vuejs.org/api/composition-api-lifecycle#onerrorcaptured)
+### Intention
 
-## Random Things
+I made this project because I wanted to learn how to use [fetch api](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) with [OpenWeatherMap API](https://openweathermap.org/api)
 
-I never used vue before, so I was really surprise when you can do this:
-
-```vue
-<script setup>
-import Random from '...'
-</script>
-
-<template>
-  <Random class="..." />
-</template>
-```
-
-you dont need to specify the `class` prop, meanwhile in react you need to do this:
-
-```tsx
-export const Random = ({ className }: { className: string }) => {
-  return <div className={className}>...</div>
-}
-```
-
-Thas a really cool feature.
+![Weather](/weather.png)
